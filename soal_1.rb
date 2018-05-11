@@ -1,6 +1,6 @@
-first_name = 'nandang'
+first_name = 'buek'
 middle_name = 'willier'
-last_name = 'sopyan'
+last_name = 'totoro'
 
 def text(f, m, l)
   if m != ''
