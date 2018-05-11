@@ -1,13 +1,19 @@
-first_name = 'nandang'
-middle_name = 'willier'
-last_name = 'sopyan'
+puts 'Siapa nama kamu?'
+nama = gets
+
+@array = nama.split
 
 def text(f, m, l)
-  if m != ''
-    m = m.capitalize.chars.first + '.'
+  begin
+    if @array.count > 2 
+      puts "#{f.capitalize} #{m.chars.first.capitalize + '.'} #{l.capitalize}"
+    else
+      puts "#{f.capitalize} #{m.capitalize}"
+    end
+  rescue
+    puts 'Kamu harus memasukan nama depan, nama tengah(optional), dan nama belakang'
   end
   
-  puts "#{f.capitalize} #{m} #{l.capitalize}".split.join(' ')
 end
 
-text(first_name, middle_name, last_name)
+text(@array[0], @array[1], @array[2])
