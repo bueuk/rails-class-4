@@ -16,7 +16,11 @@ class Calculator
   end
 
   def pembagian(a, b)
-    a / b
+    begin
+      a / b
+    rescue
+      puts 'Terjadi error. Pastikan tidak dibagi 0'
+    end
   end
 end
 
@@ -37,13 +41,9 @@ if hitung.count == 3
     puts hasil_kali
 
   elsif hitung.grep(/\//).any?
-    begin
-      calc = Calculator.new
-      hasil_bagi = calc.pembagian(hitung[0].to_i, hitung[2].to_i)
-      puts hasil_bagi
-    rescue
-      puts 'tidak bisa dibagi 0'
-    end
+    calc = Calculator.new
+    hasil_bagi = calc.pembagian(hitung[0].to_i, hitung[2].to_i)
+    puts hasil_bagi
   end
 else
   puts 'Ada yang error! pisahkan perhitungan dengan spasi, misal 2 + 3 . Minimal dan maksimal perhitungan adalah dua nilai, lebih atau kurang dari dua nilai tidak dianggap!' 
