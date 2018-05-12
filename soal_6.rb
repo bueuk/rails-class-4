@@ -20,7 +20,7 @@ class Calculator
       end
       
     else
-      puts 'Ada yang error! pisahkan perhitungan dengan spasi, misal 2 + 3 . Minimal dan maksimal perhitungan adalah dua nilai, lebih atau kurang dari dua nilai tidak dianggap!' 
+      puts 'Ada yang error!!! pisahkan perhitungan dengan spasi, misal 2 + 3 . Minimal dan maksimal perhitungan adalah dua nilai, lebih atau kurang dari dua nilai tidak dianggap!' 
     end
     
   end
