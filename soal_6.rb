@@ -1,17 +1,17 @@
 class Calculator
-  def calc_process(params)
-    params = params.split
+  def calculate(value)
+    value = value.split
 
-    if params.count == 3
-      if params.grep(/\+/).any?
-        params[0].to_i + params[2].to_i
-      elsif params.grep(/\-/).any?
-        params[0].to_i - params[2].to_i
-      elsif params.grep(/\*/).any?
-        params[0].to_i * params[2].to_i
-      elsif params.grep(/\//).any?
+    if value.count == 3
+      if value.grep(/\+/).any?
+        value[0].to_i + value[2].to_i
+      elsif value.grep(/\-/).any?
+        value[0].to_i - value[2].to_i
+      elsif value.grep(/\*/).any?
+        value[0].to_i * value[2].to_i
+      elsif value.grep(/\//).any?
         begin
-          params[0].to_i / params[2].to_i
+          value[0].to_i / value[2].to_i
         rescue
           puts 'Terjadi error. Pastikan tidak dibagi 0'
         end
@@ -30,5 +30,5 @@ puts 'Perhitungan: '
 value = gets.chomp
 
 calc = Calculator.new
-hasil = calc.calc_process(value)
+hasil = calc.calculate(value)
 puts hasil
