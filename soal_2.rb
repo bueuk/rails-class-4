@@ -1,14 +1,10 @@
-puts 'Siapa nama kamu?'
-nama = gets
-
-@array = nama.split
-
-def text(f, m, l)
+def text(nama)
+  nama = nama.split
   begin
-    if @array.count > 2 
-      puts "#{f.capitalize} #{m.chars.first.capitalize + '.'} #{l.capitalize}"
+    if nama.count > 2 
+      puts "#{nama[0].capitalize} #{nama[1].chars.first.capitalize + '.'} #{nama[2].capitalize}"
     else
-      puts "#{f.capitalize} #{m.capitalize}"
+      puts "#{nama[0].capitalize} #{nama[1].capitalize}"
     end
   rescue
     puts 'Kamu harus memasukan nama depan, nama tengah(optional), dan nama belakang'
@@ -16,4 +12,7 @@ def text(f, m, l)
   
 end
 
-text(@array[0], @array[1], @array[2])
+puts 'Siapa nama kamu?'
+nama = gets
+
+text(nama)
