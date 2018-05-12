@@ -44,6 +44,8 @@ if hitung.count == 3
     calc = Calculator.new
     hasil_bagi = calc.pembagian(hitung[0].to_i, hitung[2].to_i)
     puts hasil_bagi
+  else
+    puts 'Operator aritmatik tidak dikenali!'
   end
 else
   puts 'Ada yang error! pisahkan perhitungan dengan spasi, misal 2 + 3 . Minimal dan maksimal perhitungan adalah dua nilai, lebih atau kurang dari dua nilai tidak dianggap!' 
