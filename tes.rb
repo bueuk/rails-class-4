@@ -1,2 +1,1 @@
-def a
-end
+puts 'halo git'
