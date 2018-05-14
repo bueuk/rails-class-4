@@ -1,8 +1,24 @@
+class String
+  def numeric?
+    Float(self) != nil rescue false
+  end
+
+  def average(angka)
+    angka = angka.split
+    if angka.all? {|i| i.numeric?}
+      angka = angka.map(&:to_i)
+      angka.sum / angka.size
+    else
+      puts 'String detected!!! semua harus angka!'
+    end
+
+  end
+end
+
 puts 'Nilai nilai yang ingin dihitung :'
-angka = gets.chomp.split
+angka = gets.chomp
 
-#belum divalidasi
-#jika yang diinput adalah 'huruf' maka akan tetap dianggap integer karena sudah di to_i, jadi nilainya 0
-s_to_i = angka.map(&:to_i)
+avg = String.new
+hasil = avg.average(angka)
 
-puts "Nilai rata-ratanya adalah #{s_to_i.sum / s_to_i.size}"
+puts hasil
