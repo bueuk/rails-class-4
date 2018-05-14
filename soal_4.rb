@@ -9,7 +9,7 @@ class String
       angka = angka.map(&:to_i)
       angka.sum / angka.size
     else
-      puts 'String detected!!! semua harus angka!'
+      puts 'String detected!! semua harus angka!'
     end
 
   end
