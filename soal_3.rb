@@ -14,7 +14,7 @@ def fizz_buzz(angka)
     end
     
   rescue 
-    puts 'Harus angka!'
+    puts 'Harus angka integer!'
 
   end
 end
