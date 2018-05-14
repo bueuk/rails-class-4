@@ -7,7 +7,7 @@ class String
     angka = angka.split
     if angka.all? {|i| i.numeric?}
       angka = angka.map(&:to_i)
-      angka.sum / angka.size
+      puts "Nilai rata-rata: #{angka.sum / angka.size}"
     else
       puts 'String detected!! semua harus angka!'
     end
@@ -19,6 +19,6 @@ puts 'Nilai nilai yang ingin dihitung :'
 angka = gets.chomp
 
 avg = String.new
-hasil = avg.average(angka)
+avg.average(angka)
 
-puts hasil
+#puts "Nilai rata-rata : #{hasil}"
